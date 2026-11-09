@@ -1,5 +1,6 @@
 import java.util.List;
 import java.util.Map;
+import java.util.ArrayList;
 
 public class MidtermPractice {
     /**
@@ -31,8 +32,19 @@ public class MidtermPractice {
      * @return the count of words longer than 5 characters
      * Example: input: ["why"=7, "hello"=8, "brilliant"=99, "world"=15, "amazing"=17] -> output: 2
      */
-    public static int countLongWords(Map<String, Integer> map) {
-        return -1;
+    public static int countLongWords(Map<String, Integer> map) 
+    {
+        int count = 0;
+
+        List<String> keys = new ArrayList<String>(map.keySet());
+        for(int i = 0; i <keys.size(); i++)
+        {
+            if(keys.get(i).length()>5)
+            {
+                count++;
+            }
+        }
+        return count;
     }
 
     /**
