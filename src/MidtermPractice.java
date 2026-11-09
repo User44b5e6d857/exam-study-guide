@@ -100,8 +100,17 @@ public class MidtermPractice {
      * Example: input: [3, 6, 9] -> output: true
      * Example 2: input: [3, 4, 6, 9] -> output: false
      */
-    public static boolean allDivisibleBy3(int[] arr) {
-        return false;
+    public static boolean allDivisibleBy3(int[] arr) 
+    {
+        for(int i = 0; i < arr.length; i++)
+        {
+            if(arr[i] % 3 != 0)
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     /**
@@ -112,8 +121,19 @@ public class MidtermPractice {
      * Example: input: ["apple", "Apricot", "avocado"] -> output: true
      * Example: input: ["apple", "banana", "avocado"] -> output: false
      */
-    public static boolean allStartWithA(List<String> list) {
-        return false;
+    public static boolean allStartWithA(List<String> list) 
+    {
+        for(int i = 0; i < list.size(); i++)
+        {
+            String word = list.get(i);
+
+            if(word.charAt(0) != 'a' && word.charAt(0) != 'A')
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     /**
