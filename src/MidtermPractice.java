@@ -198,7 +198,31 @@ public class MidtermPractice {
      */
     public static ListNode removeSmall(ListNode head) 
     {
-        return null;
-    }
+        while(head != null && head.data < 10)
+        {
+            head = head.next;
+        }
 
+        if(head == null)
+        {
+            return null;
+        }
+       
+        ListNode current = head;
+
+        while(current.next != null)
+        {
+            if(current.next.data < 10)
+            {
+                current.next = current.next.next;
+            }
+
+            else
+            {
+                current = current.next;
+            }
+        }
+
+        return head;
+    }
 }
