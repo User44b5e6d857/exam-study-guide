@@ -77,8 +77,19 @@ public class MidtermPractice {
      */
     public static int countOddNumbers(Map<String, Integer> map) 
     {
+        int count = 0;
+
+        ArrayList<Integer> values = new ArrayList<Integer>(map.values());
+
+        for(int i = 0; i < values.size(); i++)
+        {
+            if(values.get(i) % 2 != 0)
+            {
+                count++;
+            }
+        }
         
-        return -1;
+        return count;
     }
 
     /**
