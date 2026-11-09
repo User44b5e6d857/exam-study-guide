@@ -53,8 +53,20 @@ public class MidtermPractice {
      * @return the average of the values or 0 if the array is empty
      * Example: input: [1.5, 3.5, 2.0, 3.0] -> output: 2.5
      */
-    public static double findAverage(float[] arr) {
-        return -1.0;
+    public static double findAverage(float[] arr) 
+    {
+        if(arr.length == 0)
+        {
+            return 0;
+        }
+
+        float sum = 0;
+        for(int i = 0; i < arr.length; i++)
+        {
+            sum += arr[i];
+        }
+
+        return sum/arr.length;
     }
 
     /**
@@ -63,7 +75,9 @@ public class MidtermPractice {
      * @return the count of odd numbers in the values
      * Example: input: {"a"=7, "x"=4, "z"=5} -> output: 2
      */
-    public static int countOddNumbers(Map<String, Integer> map) {
+    public static int countOddNumbers(Map<String, Integer> map) 
+    {
+        
         return -1;
     }
 
