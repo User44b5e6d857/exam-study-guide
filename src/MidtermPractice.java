@@ -165,8 +165,23 @@ public class MidtermPractice {
      * Example output: 60
      * Explanation: 5 * 3 * 4 = 60
      */
-    public static int product(ListNode head) {
-        return 1;
+    public static int product(ListNode head) 
+    {
+        if(head == null)
+        {
+            return 1;
+        }
+
+        int product = 1;
+        ListNode current = head;
+
+        while(current != null)
+        {
+            product = product * current.data;
+            current = current.next;
+        }
+
+        return product;
     }
 
     /**
@@ -181,7 +196,8 @@ public class MidtermPractice {
      * Example output: 99 -> 33 -> 10
      * Explanation: 6, 2, and 4 are each strictly less than 10, so they are removed from the list
      */
-    public static ListNode removeSmall(ListNode head) {
+    public static ListNode removeSmall(ListNode head) 
+    {
         return null;
     }
 
