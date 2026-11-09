@@ -141,7 +141,19 @@ public class MidtermPractice {
      * Returns true if the head is null.
      * @param head the head of the linked list.
      */
-    public static boolean allPositive(ListNode head) {
+    public static boolean allPositive(ListNode head) 
+    {
+        ListNode current = head;
+        while(current != null)
+        {
+            if(current.data <= 0)
+            {
+                return false;
+            }
+
+            current = current.next;
+        }
+
         return true;
     }
 
